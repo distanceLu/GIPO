@@ -4,7 +4,7 @@ This repository contains a lightweight, single-process implementation of Reinfor
 
 ---
 
-## ## Overview
+## Overview
 
 The script `metaworld_ppo_discrete_simple_complete.py` provides an end-to-end training pipeline for robotic control. Key features include:
 
@@ -16,7 +16,7 @@ The script `metaworld_ppo_discrete_simple_complete.py` provides an end-to-end tr
 
 ---
 
-## ## Architecture
+## Architecture
 
 
 
