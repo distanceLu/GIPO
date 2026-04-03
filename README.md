@@ -42,14 +42,14 @@ pip install -r requirements.txt
 
 ## Usage
 
-### ### Training
+### Training
 To initiate training on a specific MetaWorld task (e.g., `reach-v3`):
 
 ```bash
 python metaworld_ppo_discrete_simple_complete.py --task-name reach-v3 --clip-mode gipo
 ```
 
-### ### Key Hyperparameters
+### Key Hyperparameters
 | Argument | Default | Description |
 | :--- | :--- | :--- |
 | `--clip-mode` | `gipo` | Clipping strategy choice: `ppo`, `sapo`, or `gipo`. |
@@ -58,7 +58,7 @@ python metaworld_ppo_discrete_simple_complete.py --task-name reach-v3 --clip-mod
 | `--policy-lr` | `3e-4` | Learning rate for the policy head. |
 | `--sigma` | `1.0` | The $\sigma$ parameter controlling the GIPO soft-clipping width. |
 
-### ### Monitoring
+### Monitoring
 Progress is logged via **TensorBoard**. You can monitor returns, success rates, and the ratio of policy updates:
 
 ```bash
@@ -69,11 +69,11 @@ tensorboard --logdir runs/
 
 ## Implementation Details
 
-### ### Action Mapping
+### Action Mapping
 MetaWorld typically requires continuous actions in the range $[-1, 1]$. This wrapper converts discrete token IDs back to continuous values using the following logic:
 $$continuous = -1.0 + 2.0 \cdot \frac{token}{bins - 1}$$
 
-### ### GIPO Mechanism
+### GIPO Mechanism
 When `--clip-mode gipo` is active with the Gaussian kernel, the surrogate loss is weighted by a soft-clipping coefficient:
 $$coeff = \exp\left(-0.5 \cdot \left(\frac{\log(ratio)}{\sigma}\right)^2\right)$$
 
