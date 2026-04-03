@@ -10,7 +10,7 @@ The script `metaworld_ppo_discrete_simple_complete.py` provides an end-to-end tr
 
 * **Discrete Action Space:** Maps continuous MetaWorld actions into $N$ discrete bins (default 256) per dimension to simplify the policy output.
 * **Actor-Critic MLP:** A shared encoder architecture with independent policy and value heads for efficient feature extraction.
-* **GIPO Clipping:** Implements Generalized Information Policy Optimization, which uses kernels (Gaussian, Laplacian, or Cauchy) to provide a smoother optimization landscape than standard PPO.
+* **GIPO Clipping:** Implements Gaussian Importance Sampling Policy Optimization, which uses kernels (Gaussian, Laplacian, or Cauchy) to provide a smoother optimization landscape than standard PPO.
 * **Efficiency:** Designed for $39$-dimensional state inputs and optimized with `bfloat16` support for high-performance training on modern GPUs.
 * **Dynamic Schedulers:** Built-in cosine decay for learning rates with configurable warmup periods for both actor and critic.
 
