@@ -28,7 +28,7 @@ The model follows a classic Actor-Critic structure with a shared representation 
 
 ---
 
-## ## Requirements
+## Requirements
 
 The project requires a MuJoCo-compatible environment and the dependencies listed in `requirements.txt`:
 
@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 ---
 
-## ## Usage
+## Usage
 
 ### ### Training
 To initiate training on a specific MetaWorld task (e.g., `reach-v3`):
@@ -67,7 +67,7 @@ tensorboard --logdir runs/
 
 ---
 
-## ## Implementation Details
+## Implementation Details
 
 ### ### Action Mapping
 MetaWorld typically requires continuous actions in the range $[-1, 1]$. This wrapper converts discrete token IDs back to continuous values using the following logic:
@@ -81,7 +81,7 @@ This approach ensures that the policy does not deviate too aggressively from the
 
 ---
 
-## ## Checkpointing
+## Checkpointing
 The system saves comprehensive experiment data to the `log-dir`:
 * **`args.json`**: Saves all CLI arguments for experiment reproduction.
 * **`simple_state_iter_N.pt`**: Contains model state, optimizer state, and all random seeds (Torch, NumPy, Python).
