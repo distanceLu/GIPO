@@ -57,7 +57,7 @@ python metaworld_ppo_discrete_simple_complete.py --task-name reach-v3 --clip-mod
 | `--train-iters` | `1000` | Total number of training iterations. |
 | `--policy-lr` | `3e-4` | Learning rate for the policy head. |
 | `--sigma` | `1.0` | The $\sigma$ parameter controlling the GIPO soft-clipping width. |
-
+| `--seed` | `42` | Random seed for reproducibility (Torch, NumPy, Python). |
 ### Monitoring
 Progress is logged via **TensorBoard**. You can monitor returns, success rates, and the ratio of policy updates:
 
